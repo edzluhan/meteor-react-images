@@ -1,4 +1,5 @@
 import React from 'react';
+import VotesBar from './votes_bar';
 
 const ImageDetails = (props) => {
     return (
@@ -7,7 +8,9 @@ const ImageDetails = (props) => {
                 <img src ={ props.image.link } />
             </div>
             <div className="media-body">
-                <h4>{ props.image.title }</h4>
+                <h4 className="media-heading">{ props.image.title }</h4>
+                <p>{ props.image.description }</p>
+                <VotesBar ups={ props.image.ups } downs={ props.image.downs } />
             </div>
         </li>
     )
